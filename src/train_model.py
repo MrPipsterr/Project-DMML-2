@@ -1,5 +1,6 @@
 import pandas as pd
 from lightgbm import LGBMRegressor
+from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import MinMaxScaler
 import joblib
 import warnings
@@ -29,7 +30,7 @@ def add_features(df):
     df['q75'] = df[BASE_FEATURES].quantile(0.75, axis=1)
     return df
 
-train = pd.read_csv('../Data/train.csv')
+train = pd.read_csv('../datasets/train.csv')
 
 train = add_features(train)
 
@@ -47,4 +48,8 @@ joblib.dump(scaler, '../model/scaler.pkl')
 model_lgbm = LGBMRegressor(objective='regression', random_state=0)
 model_lgbm.fit(X_train, y_train)
 
+model_lr = LinearRegression()
+model_lr.fit(X_train, y_train)
+
 joblib.dump(model_lgbm, '../model/model_lgbm.pkl')
+joblib.dump(model_lr, '../model/model_lr.pkl')
