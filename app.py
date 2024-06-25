@@ -10,8 +10,10 @@ from designUi.main_window import Ui_Form
 class MainForm(QMainWindow):
     model_lgbm = joblib.load('model/model_lgbm.pkl')
     model_lr = joblib.load('model/model_lr.pkl')
+    model_cat = joblib.load('model/model_cat.pkl')
+    model_bayesian = joblib.load('model/model_bayesian.pkl')
     scaler = joblib.load('model/scaler.pkl')
-    current_model = model_lgbm
+    current_model = model_cat
 
     def __init__(self):
         super(MainForm, self).__init__()
@@ -74,9 +76,13 @@ class MainForm(QMainWindow):
 
     def on_algorithm_changed(self, index):
         if index == 0:
-            self.current_model = self.model_lgbm
+            self.current_model = self.model_cat
         elif index == 1:
+            self.current_model = self.model_lgbm
+        elif index == 2:
             self.current_model = self.model_lr
+        elif index == 3:
+            self.current_model = self.model_bayesian
 
 
     def make_prediction(self, features):

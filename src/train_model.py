@@ -1,11 +1,14 @@
 import pandas as pd
 from lightgbm import LGBMRegressor
 from sklearn.linear_model import LinearRegression
+from sklearn import svm
+from sklearn.linear_model import BayesianRidge
+from sklearn.neighbors import KNeighborsRegressor
 from sklearn.preprocessing import MinMaxScaler
+from catboost import CatBoostRegressor
 import joblib
 import warnings
 warnings.filterwarnings('ignore')
-
 
 def add_features(df):
     BASE_FEATURES = ['MonsoonIntensity', 'TopographyDrainage', 'RiverManagement',
@@ -45,6 +48,18 @@ X_train = scaler.fit_transform(X_train)
 
 joblib.dump(scaler, '../model/scaler.pkl')
 
+model_cat = CatBoostRegressor(random_state=0)
+model_cat.fit(X_train, y_train)
+
+model_svm = svm.SVR()
+model_svm.fit(X_train, y_train)
+
+model_knn = KNeighborsRegressor()
+model_knn.fit(X_train, y_train)
+
+model_bayesian = BayesianRidge()
+model_bayesian.fit(X_train, y_train)
+
 model_lgbm = LGBMRegressor(objective='regression', random_state=0)
 model_lgbm.fit(X_train, y_train)
 
@@ -53,3 +68,7 @@ model_lr.fit(X_train, y_train)
 
 joblib.dump(model_lgbm, '../model/model_lgbm.pkl')
 joblib.dump(model_lr, '../model/model_lr.pkl')
+joblib.dump(model_cat, '../model/model_cat.pkl')
+joblib.dump(model_svm, '../model/model_svm.pkl')
+joblib.dump(model_knn, '../model/model_knn.pkl')
+joblib.dump(model_bayesian, '../model/model_bayesian.pkl')
