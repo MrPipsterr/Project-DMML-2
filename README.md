@@ -14,6 +14,9 @@ Aplikasi Flood Predicition dibuat dengan tujuan penggunaan oleh sebuah organisas
 pyqt5
 
 ## Fitur Aplikasi
+![Screenshot_2024-06-25_133307](https://github.com/yusuffikry/Project-DMML-2/assets/113654172/1d493fe7-b8d0-4b60-a84a-edf6031fc959)
+![image](https://github.com/yusuffikry/Project-DMML-2/assets/113654172/073c86a0-b748-4838-9313-8d84d8bb1387)
+
 
 ## Model yang Digunakan :
   1. Light GBM Regressor
