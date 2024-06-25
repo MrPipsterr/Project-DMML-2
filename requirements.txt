@@ -4,5 +4,6 @@ matplotlib
 seaborn
 scikit-learn
 lightgbm
+pycaret
 pyqt5
 pyqt5-tools

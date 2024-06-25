@@ -30,7 +30,7 @@ def add_features(df):
     df['q75'] = df[BASE_FEATURES].quantile(0.75, axis=1)
     return df
 
-train = pd.read_csv('../datasets/train.csv')
+train = pd.read_csv('../data/train.csv')
 
 train = add_features(train)
 
