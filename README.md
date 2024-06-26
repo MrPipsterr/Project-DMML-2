@@ -17,6 +17,14 @@ Aplikasi Flood Predicition dibuat dengan tujuan penggunaan oleh sebuah organisas
 ##### Aplikasi ini dibuat menggunakan : 
 pyqt5
 
+## Algoritma Machine Learning yang Digunakan :
+  1. Support Vector Machine
+  2. Bayesian Ridge Regression
+  3. Catboost Regressor
+  4. K-Nearest Neighbors Regressor
+  5. Light GBM Regressor
+  6. Linear Regression
+
 ## Fitur Aplikasi
 ![Screenshot_2024-06-25_133307](https://github.com/yusuffikry/Project-DMML-2/assets/113654172/1d493fe7-b8d0-4b60-a84a-edf6031fc959)
 ![image](https://github.com/yusuffikry/Project-DMML-2/assets/113654172/073c86a0-b748-4838-9313-8d84d8bb1387)
@@ -25,10 +33,21 @@ pyqt5
   - kalkulasi peluang terjadinya banjir
   - halaman info untuk melihat keterangan mengenai performa model
 
-## Model yang Digunakan :
-  1. Support Vector Machine
-  2. Bayesian Ridge Regression
-  3. Catboost Regressor
-  4. K-Nearest Neighbors Regressor
-  5. Light GBM Regressor
-  6. Linear Regression
+## Cara Menjalankan Aplikasi
+Untuk menjalankan Aplikasi Flood Prediction, perlu untuk melakukan clone pada repositori berikut
+
+```bash
+git clone https://github.com/yusuffikry/Project-DMML-2.git
+```
+
+Selanjutnya install library untuk GUI dari bahasa pemrograman Python
+
+```bash
+pip install pyqt5
+```
+
+Mulai jalankan aplikasi dengan menjalankan command line berikut pada direktori utama project
+
+```bash
+python app.py
+```
