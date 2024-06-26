@@ -10,6 +10,10 @@
 
 ## Deskripsi Project 
 Aplikasi Flood Predicition dibuat dengan tujuan penggunaan oleh sebuah organisasi atau  lembaga daerah guna memprediksi seberapa besar peluang banjir terjadi di daerahnya. Aplikasi ini akan menerima input nilai-nilai berdasarkan faktor penyebab banjir yang datanya mungkin hanya dimengerti oleh orang yang bekerja di lembaga terkait. Harapannya, dengan nilai prediksi tersebut, dapat membantu upaya mitigasi dan kesiapsiagaan akan bencana banjir.
+
+##### Sumber Dataset
+[Flood Prediction Factor by Mainak Chaudhuri on Kaggle](https://www.kaggle.com/datasets/brijlaldhankour/flood-prediction-factors)
+
 ##### Aplikasi ini dibuat menggunakan : 
 pyqt5
 
