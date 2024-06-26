@@ -40,10 +40,10 @@ Untuk menjalankan Aplikasi Flood Prediction, perlu untuk melakukan clone pada re
 git clone https://github.com/yusuffikry/Project-DMML-2.git
 ```
 
-Selanjutnya install library untuk GUI dari bahasa pemrograman Python
+Selanjutnya install beberapa library dari bahasa pemrograman Python yang dibutuhkan
 
 ```bash
-pip install pyqt5
+pip install pyqt5 pandas joblib
 ```
 
 Mulai jalankan aplikasi dengan menjalankan command line berikut pada direktori utama project
